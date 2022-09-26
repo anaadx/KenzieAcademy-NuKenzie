@@ -3,7 +3,7 @@ import "./styles.css";
 import { useState } from 'react';
 
 function TotalMoney({listTransactions}) {
-  // const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState(0);
 
   // const totalCharge = 
   // listTransactions.filter((item) => item.category === "Saída")
@@ -25,7 +25,7 @@ function TotalMoney({listTransactions}) {
     <section className='container__total'>
     <div>
       <h3 className='title3'>Valor total</h3>
-      <p className='title3'>${"200"}</p>
+      <p className='title3'>${total}</p>
     </div>
     <h3 className='headline'>O valor se refere ao saldo</h3>
     </section>
