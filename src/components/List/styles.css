@@ -1,0 +1,39 @@
+.container__list{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.menu__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.menu__list div{
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.menu__list div button{
+    background-color: var(--gray2);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.menu__list div button:hover{
+    background-color: var(--primary);
+    color: white;
+}
+
+@media (min-width: 1024px){
+    .menu__list{
+        flex-direction: row;
+    }
+}
