@@ -10,8 +10,16 @@ export function Form({ listTransactions, setListTransactions }) {
     function updateList(){
     const description = document.querySelector(".descriptionInput").value
     const transaction = document.querySelector(".valueInput").value
+    const numberTransaction = Number(transaction)
+
+    if(category === "Saída"){
+    const newTransaction = numberTransaction*-1
+
+    const newValue = {description, transaction:newTransaction, category}
+    return setListTransactions([...listTransactions, newValue])
+    }
     
-    const newValue = {description, transaction, category}
+    const newValue = {description, transaction:numberTransaction, category}
     setListTransactions([...listTransactions, newValue])
 }
 
