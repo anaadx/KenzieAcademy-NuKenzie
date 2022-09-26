@@ -4,20 +4,10 @@ import "./styles.css";
 
 export function List({ listTransactions, setListTransactions }) {
 
-  function onDelete(id) {
+  function onDelete(itemNovo) {
     const newList = listTransactions.filter((item) =>
-      item.id !== item.key); 
-
-      // listTransactions.forEach((item) => {
-      //   console.log(item.id)
-      //   console.log(id)
-      // })
-
-      
-    console.log(newList)
-    console.log(listTransactions)
-    console.log(id)
-  
+      item !== itemNovo); 
+      setListTransactions(newList)
   }
 
   return (
@@ -37,12 +27,9 @@ export function List({ listTransactions, setListTransactions }) {
             const itemId = Math.round(Math.random() * 1000) 
             return (
               <Card
-                key={itemId}
-                description={item.description}
-                category={item.category}
-                transaction={item.transaction}
-                onDelete={onDelete}
                 id={itemId}
+                item={item}
+                onDelete={onDelete}
               />
             );
           })}

@@ -12,7 +12,7 @@ function App() {
   const [listTransactions, setListTransactions] = useState([]);
   const [isPage, setPage] = useState(true);
 
-  if(isPage){
+  if(!isPage){
     return (
       <div className="App">
              <Header isPage={isPage} setPage={setPage}/>
