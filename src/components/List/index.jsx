@@ -27,6 +27,7 @@ export function List({ listTransactions, setListTransactions }) {
             const itemId = Math.round(Math.random() * 1000) 
             return (
               <Card
+              key={itemId}
                 id={itemId}
                 item={item}
                 onDelete={onDelete}

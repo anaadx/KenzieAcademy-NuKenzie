@@ -1,0 +1,21 @@
+.container__total{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid var(--gray1);
+    border-radius: 5px;
+    padding: 40px 20px;
+    width: 80%;
+    margin: 20px 0px;
+}
+
+.container__total div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container__total div p {
+    color: var(--primary);
+}

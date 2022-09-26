@@ -1,20 +1,18 @@
 import React from 'react'
 import { useState } from 'react'
-import { TotalMoney } from '../TotalMoney'
 import "./styles.css";
+import TotalMoney from '../TotalMoney'
 
 export function Form({ listTransactions, setListTransactions }) {
 
     const [category, setOption] = useState("Entrada")
 
     function updateList(){
-    alert(category)
     const description = document.querySelector(".descriptionInput").value
     const transaction = document.querySelector(".valueInput").value
     
     const newValue = {description, transaction, category}
     setListTransactions([...listTransactions, newValue])
-    console.log(listTransactions)
 }
 
   return (
